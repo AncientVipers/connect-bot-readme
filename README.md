@@ -23,7 +23,7 @@
 <br/>
 
 <!-- Quick Links -->
-[📖 Documentation](#-table-of-contents) • [🚀 Quick Start](#-quick-start) • [💬 Commands](#-commands-36-total) • [📋 Logging](#-logging-system) • [🤝 Contributing](#-contributing)
+[📖 Documentation](#-table-of-contents) • [🚀 Quick Start](#-quick-start) • [💬 Commands](#-commands-38-total) • [📋 Logging](#-logging-system) • [🤝 Contributing](#-contributing)
 
 </div>
 
@@ -39,12 +39,12 @@
 - [✨ Features](#-features)
 - [🚀 Quick Start](#-quick-start)
 - [📁 Project Structure](#-project-structure)
-- [💬 Commands (36 Total)](#-commands-36-total)
+- [💬 Commands (38 Total)](#-commands-38-total)
   - [🛡️ Moderation Commands](#️-moderation-commands-8)
   - [🎵 Music Commands](#-music-commands-19)
-  - [🔧 Utility Commands](#-utility-commands-3)
+  - [🔧 Utility Commands](#-utility-commands-5)
   - [🎮 Valorant Commands](#-valorant-commands-6)
-- [📡 Events](#-events-handled-18)
+- [📡 Events](#-events-handled-24)
 - [📋 Logging System](#-logging-system)
 - [🔢 Event IDs](#-event-id-reference)
 - [⚙️ Services](#️-core-services)
@@ -191,13 +191,13 @@ ENCRYPTION_KEY=32_byte_hex_key_for_valorant
 ```
 Connect-Bot/
 ├── 📂 src/
-│   ├── 📂 commands/          # 36 Slash Commands
+│   ├── 📂 commands/          # 38 Slash Commands
 │   │   ├── 📂 moderation/    # 8 moderation commands
 │   │   ├── 📂 music/         # 19 music commands
-│   │   ├── 📂 utility/       # 3 utility commands
+│   │   ├── 📂 utility/       # 5 utility commands
 │   │   └── 📂 valorant/      # 6 valorant commands
 │   │
-│   ├── 📂 events/            # 18 Discord Event Handlers
+│   ├── 📂 events/            # 24 Discord Event Handlers
 │   ├── 📂 services/          # 6 Core Services
 │   ├── 📂 database/          # SQLite Database
 │   ├── 📂 utils/             # Utility Functions
@@ -215,7 +215,7 @@ Connect-Bot/
 
 ---
 
-## 💬 Commands (36 Total)
+## 💬 Commands (38 Total)
 
 <div align="center">
   <img src="https://img.shields.io/badge/Moderation-8-red?style=flat-square" />
@@ -357,7 +357,7 @@ Connect-Bot/
 
 <br/>
 
-### 🔧 Utility Commands (3)
+### 🔧 Utility Commands (5)
 
 <details open>
 <summary><b>View All Utility Commands</b></summary>
@@ -366,9 +366,11 @@ Connect-Bot/
 
 | Command | Description | Options | Permissions |
 |:--------|:------------|:--------|:------------|
+| `/botusage` | View bot usage statistics | - | Administrator |
 | `/help` | Show all commands | `category` (optional) | Everyone |
 | `/ping` | Check bot latency | - | Everyone |
 | `/rebuild` | Rebuild server structure | - | **BOT OWNER ONLY** |
+| `/testdevlog` | Test dev-logs channel | `type`, `message` (optional) | **Owner/Developer Role** |
 
 <br/>
 
@@ -440,7 +442,7 @@ Connect-Bot/
 
 ---
 
-## 📡 Events Handled (18)
+## 📡 Events Handled (24)
 
 <div align="center">
 
@@ -451,6 +453,9 @@ Connect-Bot/
 | `messageCreate` | - | AutoMod processing |
 | `messageUpdate` | message-logs | Message edited |
 | `messageDelete` | message-logs | Message deleted |
+| `messageReactionAdd` | message-logs | Reaction added to message |
+| `messageReactionRemove` | message-logs | Reaction removed from message |
+| `messageReactionRemoveAll` | message-logs | All reactions cleared |
 | `guildMemberAdd` | member-logs | User joined |
 | `guildMemberRemove` | member-logs | User left/kicked/banned |
 | `guildMemberUpdate` | member-logs | Role/nickname changed |
@@ -463,6 +468,9 @@ Connect-Bot/
 | `roleCreate` | role-logs | Role created |
 | `roleDelete` | role-logs | Role deleted |
 | `roleUpdate` | role-logs | Role modified |
+| `emojiCreate` | server-logs | Server emoji created |
+| `emojiDelete` | server-logs | Server emoji deleted |
+| `emojiUpdate` | server-logs | Server emoji modified |
 | `guildUpdate` | server-logs | Server settings changed |
 
 </div>
@@ -777,15 +785,48 @@ valorant_accounts (
 
 </div>
 
+<br/>
 
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<br/>
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+<br/>
+
+---
 
 <div align="center">
+
+## 💖 Support
+
+If you found this project helpful, please consider giving it a ⭐!
+
+<br/>
+
+[![Star History Chart](https://api.star-history.com/svg?repos=AncientVipers/Connect-Bot&type=Date)](https://star-history.com/#AncientVipers/Connect-Bot&Date)
+
+<br/>
+
+---
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
 
 **Made with ❤️ by [AncientVipers](https://github.com/AncientVipers)**
 
 </div>
-
-
-
